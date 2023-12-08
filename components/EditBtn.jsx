@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { FaRegPenToSquare } from "react-icons/fa6";
 
-const EditBtn = () => {
+const EditBtn = ({ id }) => {
   return (
-    <button>
+    <Link href={`/${id}`}>
       <FaRegPenToSquare />
-    </button>
+    </Link>
   );
 };
 export default EditBtn;

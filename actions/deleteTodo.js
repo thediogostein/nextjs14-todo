@@ -3,9 +3,7 @@
 import supabase from "@/supabase/supabaseClient";
 import { revalidatePath } from "next/cache";
 
-export const deleteTodo = async (prevState, formData) => {
-  const id = formData.get("id");
-
+export const deleteTodo = async (id) => {
   const { error } = await supabase //
     .from("todos")
     .delete()
